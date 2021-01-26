@@ -23,12 +23,72 @@
             <button id="login-btn" class="btn btn-success">Enter</button>
         </div>
     </div>
+    <div id="transection-area">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit status">
+                    <h5>Deposite</h5>
+                    <h1>$00</h1>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="withdraw status">
+                    <h5>Withdraw</h5>
+                    <h1>$00</h1>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="balance status">
+                    <h5>Balance</h5>
+                    <h1>$1500</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="login-area">
+                    <h4>Deposit</h4>
+                    <input id="depositAmount" type="text" class="form-control"
+                        placeholder="$ Amount you want to deposit">
+                    <br>
+                    <button id="addDeposit" class="btn btn-success">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login-area">
+                    <h4>Withdraw</h4>
+                    <input type="text" class="form-control" placeholder="$ Amount you want to withdraw">
+                    <br>
+                    <button class="btn btn-success">Withdraw</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <script>
+
+        // Login area event hendler add
+
+
         const loginButton = document.getElementById('login-btn');
         loginButton.addEventListener('click', function () {
             const loginSection = document.getElementById('login-section')
             loginSection.style.display = 'none';
+            const transectionArea = document.getElementById('transection-area')
+            transectionArea.style.display = 'block'
+
         })
+
+        // Deposite area event hendler add
+
+        const depositBtn = document.getElementById('addDeposit');
+        depositBtn.addEventListener('click', function () {
+            const depositAmount = document.getElementById('depositAmount').value;
+            const depositNumber = parseFloat(depositAmount);
+        })
+
 
 
     </script>

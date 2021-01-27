@@ -60,7 +60,7 @@
                     <h4>Withdraw</h4>
                     <input type="text" class="form-control" placeholder="$ Amount you want to withdraw">
                     <br>
-                    <button class="btn btn-success">Withdraw</button>
+                    <button id="addWithdraw" class="btn btn-success">Withdraw</button>
                 </div>
             </div>
         </div>
@@ -96,7 +96,11 @@
         })
 
         // withdraw button event handler
-        const WithdrawBtn = document.getElementById('')
+        const withdrawBtn = document.getElementById('addWithdraw');
+        withdrawBtn.addEventListener('click', function () {
+
+        })
+
 
 
         function updateSpanText(id, depositNumber) {

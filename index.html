@@ -28,7 +28,7 @@
             <div class="col-md-4">
                 <div class="deposit status">
                     <h5>Deposite</h5>
-                    <h1>$00</h1>
+                    <h1>$ <span id="currentDeposit">00</span></h1>
                 </div>
             </div>
             <div class="col-md-4">
@@ -40,7 +40,7 @@
             <div class="col-md-4">
                 <div class="balance status">
                     <h5>Balance</h5>
-                    <h1>$1500</h1>
+                    <h1>$1250</h1>
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
 
     <script>
 
-        // Login area event hendler add
+        // Login button event handler add
 
 
         const loginButton = document.getElementById('login-btn');
@@ -81,12 +81,20 @@
 
         })
 
-        // Deposite area event hendler add
+        // Deposit button event handler add
 
         const depositBtn = document.getElementById('addDeposit');
         depositBtn.addEventListener('click', function () {
             const depositAmount = document.getElementById('depositAmount').value;
             const depositNumber = parseFloat(depositAmount);
+
+            const currentDeposit = document.getElementById('currentDeposit').innerText;
+            const currentDepositNumber = parseFloat(currentDeposit);
+            const totalDeposit = depositNumber + currentDepositNumber;
+
+            document.getElementById('currentDeposit').innerText = totalDeposit;
+            document.getElementById('depositAmount').value = "";
+
         })
 
 
